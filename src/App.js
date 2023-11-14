@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Inlinestyle from './inlinestyle';
+import bg from './bg.svg';
+import ObjectVariable from './ObjectVariable';
+import StyleComponent from './StyleComponent';
 
 function App() {
+  const divStyle = {
+    backgroundImage: `url(${bg})`,
+    backgroundSize: "100%",
+    backgroundRepeat: 'no-repeat',
+    minHeight: '100vh',
+    fontFamily: 'Poppins, sans-serif',
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={divStyle}>
+      <Inlinestyle />
+      <ObjectVariable />
+      <StyleComponent/>
     </div>
+    
   );
 }
 
